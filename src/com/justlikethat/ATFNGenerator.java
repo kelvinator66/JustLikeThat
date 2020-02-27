@@ -10,7 +10,8 @@ public class ATFNGenerator {
 	public static void main(String[] args) {
 
 		int[] AFN = new int[9];
-		int count=0,requiredNos=10000;
+		int count=0,
+				requiredNos=10000;//number of ATFNs to be generated
 		
 		while (true) {
 			int i = 0;
@@ -26,7 +27,7 @@ public class ATFNGenerator {
 				i++;
 			}
 			if (verifyAFN(AFN)) {
-				System.out.println(Arrays.toString(AFN));
+				System.out.println(Arrays.toString(AFN).replace("[", "").replace("]", "").replace(",", ""));
 				count++;
 			}			
 			if(count==requiredNos)break;
